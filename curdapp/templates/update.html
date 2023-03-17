@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD | Update Employee</title>
+    <style>
+        *{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+          h1 {
+            background-color: rgb(66, 170, 205);
+            color: white;
+            text-align: center;
+           
+        }
+        
+        
+        
+        input{
+            width: 100%;
+            padding: 5px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+          form{
+            /* border: solid black 2px; */
+            border-radius: 6px;
+            padding: 15px;
+            width: 25%;
+            background-color: rgb(194, 247, 238);
+           
+          }
+
+          button{
+            width: 100%;
+            background-color: rgb(101, 205, 101);
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+          }
+          p{
+            text-align: center;
+          }
+          hr{
+            height: 1.5px;
+            background-color: black;
+            border: none;
+          }
+    </style>
+</head>
+<body>
+    <h1>Update Employee Record</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        <p>Update Employee Record</p>
+        <hr>
+        <label>Name</label>
+        <input type="text" name ="name" value = "{{data.name}}" placeholder="enter employee name">
+        
+        <label>Email</label>
+        <input type="email" name ="email" value = "{{data.email}}" placeholder="enter employee email">
+        
+        <label>Phone</label>
+        <input type="number" name ="phone" value = "{{data.phone}}" placeholder="enter employee phone">
+        
+        <label>Salary</label> 
+        <input type="number" name ="salary" value = "{{data.salary}}" placeholder="enter employee salary">
+        
+        <label>City</label>
+        <input type="text" name ="city" value = "{{data.city}}" placeholder="enter employee salary">
+        
+        <label>State</label>
+        <input type="text" name ="state" value = "{{data.state}}" placeholder="enter employee state">
+        
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

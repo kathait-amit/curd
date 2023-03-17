@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD | Add Employee</title>
+    <style>
+        *{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+          h1 {
+            background-color: rgb(66, 170, 205);
+            color: white;
+            text-align: center;
+           
+        }
+        input{
+          width: 100%;
+          padding: 5px 10px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        form{
+            /* border: solid black 2px; */
+            border-radius: 6px;
+            padding: 15px;
+            width: 25%;
+            background-color: rgb(194, 247, 238);
+           
+          }
+
+          button{
+            width: 100%;
+            background-color: rgb(101, 205, 101);
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+          }
+          p{
+            text-align: center;
+          }
+          hr{
+            height: 1.5px;
+            background-color: black;
+            border: none;
+          }
+    </style>
+</head>
+<body>
+    <h1>Add New Employee Record</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        <p>Add New Employee Record</p>
+        <hr>
+        <lable>Name</lable>
+        <input type="text" name ="name" placeholder="enter employee name">
+        <br>
+        <lable>Email</lable>
+        <input type="email" name ="email" placeholder="enter employee email">
+        <br>
+        <lable>Phone</lable>
+        <input type="number" name ="phone" placeholder="enter employee phone">
+        <br>
+        <lable>Salary</lable>
+        <input type="number" name ="salary" placeholder="enter employee salary">
+        <br>
+        <lable>City</lable>
+        <input type="text" name ="city" placeholder="enter employee salary">
+        <br>
+        <lable>State</lable>
+        <input type="text" name ="state" placeholder="enter employee state">
+        <br>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
